@@ -1,5 +1,18 @@
-string Banana =
-"DFS Smoothie Banana
+string Tea = "\n
+DFS Tea - Lavender Tea Set
+DFS Stove
+Slot - Item
+1 - DFS Tea - Lavender
+2 - DFS Tea - Lavender
+3 - DFS Cream
+4 - DFS Sugar
+5 - DFS Water Bucket
+Time: 300
+4 Uses 20 EP/use - 1XP
+----------------------------";
+
+string Banana = "\n
+DFS Smoothie Banana
 
 DFS Freezer
 Slot - Item
@@ -13,8 +26,8 @@ Time : 00:02:00
 1 Use - 52 EP/use - 1 XP
 ----------------------------";
 
-string Berry =
-"DFS Smoothie Berry
+string Berry = "\n
+DFS Smoothie Berry
 
 DFS Freezer
 Slot - Item
@@ -28,8 +41,8 @@ Time : 00:02:00
 1 Use - 52 EP/use - 1 XP
 ----------------------------";
 
-string Orange =
-"DFS Smoothie Orange
+string Orange = "\n
+DFS Smoothie Orange
 
 DFS Freezer
 Slot - Item
@@ -43,8 +56,8 @@ Time : 00:02:00
 1 Use - 52 EP/use - 1 XP
 ----------------------------";
 
-string Strawberry =
-"DFS Smoothie Strawberry
+string Strawberry = "\n
+DFS Smoothie Strawberry
 
 DFS Freezer
 Slot - Item
@@ -74,7 +87,7 @@ default
         // It's best to set up the listener before issuing the dialog
         gListener = llListen(-99, "", user, "");
         // Send a dialog to that person. We'll use a fixed negative channel number for simplicity
-        llDialog(user, "\nWhat do you want to cook?", ["Banana", "Berry", "Orange", "Strawberry" ] , -99);
+        llDialog(user, "\nWhat do you want to cook?\n", ["Banana", "Berry", "Orange", "Strawberry", "Tea" ] , -99);
         // Start a one-minute timer, after which we will stop listening for responses
         llSetTimerEvent(60.0);
     }
@@ -89,6 +102,8 @@ default
             llSay(0, Orange);
         if (msg == "Strawberry")
             llSay(0, Strawberry);
+        if (msg == "Tea")
+            llSay(0, Tea);
         // The user did not click "Yes" ...
         // Make the timer fire immediately, to do clean-up actions
         llSetTimerEvent(0.1);
