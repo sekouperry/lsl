@@ -1,0 +1,11 @@
+
+First of all Change the number channel into 2 scripts (must be the same)
+- Script texture reception for mesh
+- Script Change Control for hud
+
+
+- Place your item on the floor, press right button and select EDIT.
+- Go to the CONTENT tab, here we must add the Script texture reception.
+- Сhange the UUID of the texture (9th line Script Change Control for hud).
+- Make your HUD.
+- Go to the CONTENT tab, here we must add the Script Change Control for hud (into each prim of your HUD ).
